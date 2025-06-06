@@ -14,11 +14,15 @@
       GOOGLE_CLIENT_SECRET= \\
       NEXTAUTH_URL=http://localhost:8000 \\
       NEXTAUTH_SECRET=`
+- Middleware : private routing default via next-auth/middleware with only `matcher=["/dashborad"]`
 - Component
   - base : basic template of pages
+  - dashboard : dashboard page >> DashNav >> ProfileMenu >> UserAvatar
+  - auth : LoginModal , LogoutModal
+
 
 ## Server 
 
 - NodeJs Server on Express
 - Prisma : Postgres via NEON/Supabase::also integre later with mongodb for structureless schema
-- Supabase : create new project with prisma ORM `npx prisma init` and create schema them migrate `npx prisma migrate dev --name=users_table
+- Supabase : create new project with prisma ORM `npx prisma init` and create schema them migrate `npx prisma migrate dev --name=users_table`
